@@ -1,0 +1,17 @@
+<form method="POST" action="/search">
+  <div class="mb-3">
+    <label for="searchInput" class="form-label">Từ khóa:</label>
+    <input type="text" name="q" class="form-control" id="exampleInputEmail1">
+  </div>
+
+  <div class="mb-3">
+    <label for="genderInput" class="form-label">Giới tính:</label>
+    <select name="gender" class="form-control" id="genderInput">
+        <option value="">-- Chon gioi tinh --</option>
+        <option value="male">Nam</option>
+        <option value="female">Nữ</option>
+      </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
