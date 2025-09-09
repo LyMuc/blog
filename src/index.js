@@ -5,6 +5,10 @@ const morgan = require('morgan');
 const handlebars = require('express-handlebars');
 const path = require('path');
 const route = require('./routes');
+const db = require('./config/db');
+
+//Connect to db
+db.connect();
 
 // Middleware to parse URL-encoded bodies (as sent by HTML forms)
 app.use(

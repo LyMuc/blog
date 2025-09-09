@@ -32,7 +32,8 @@
   "homepage": "https://github.com/LyMuc/blog#readme",
   "dependencies": {
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.3"
+    "express-handlebars": "^8.0.3",
+    "mongoose": "^8.18.1"
   },
   "devDependencies": {
     "husky": "^9.1.7",
