@@ -1,4 +1,3 @@
-
 class NewsController {
     // [GET] /news
     index(req, res) {
@@ -8,7 +7,7 @@ class NewsController {
     // [GET] /news/:slug
     show(req, res) {
         res.send('NEWS DETAIL!!!');
-    }   
+    }
 }
 
 module.exports = new NewsController();
