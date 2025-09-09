@@ -1,1 +1,1 @@
-npm lint-staged
+prettier "src/**/*.{js, json, scss}" --write --single-quote --trailing-comma all --tab-width 4
