@@ -1,15 +1,15 @@
 const Course = require('../models/Course');
+const { multipleMongooseToObject } = require('../../util/mongoose');
 
 class SiteController {
     // [GET] /
-    async index(req, res) {
-        //res.render('home');
-        try {
-            const data = await Course.find({});
-            res.json(data);
-        } catch (err) {
-            res.status(500).json({ error: 'Internal Server Error' });
-        }
+    index(req, res, next){
+        Course.find({})
+        .then(courses => {
+            courses = multipleMongooseToObject(courses);
+            res.render('home', {courses});
+        })
+        .catch(next);
     }
     // [GET] /:slug
     show(req, res) {
